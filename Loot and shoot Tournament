@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loot and Shoot Tournament</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Global ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Orbitron',sans-serif;background:#111;color:#fff;line-height:1.6;}
+a{text-decoration:none;color:#fff;}
+h1,h2,h3{font-weight:700;}
+header{background:#0b0b0b;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #ff0000;}
+header h1{color:#ff0000;font-size:28px;}
+nav a{margin:0 12px;font-weight:500;transition:0.3s;}
+nav a:hover{color:#ff4d4d;}
+.container{padding:30px;}
+section{padding:50px 0;}
+.section-title{color:#ff4d4d;margin-bottom:20px;text-align:center;font-size:28px;border-bottom:2px solid #ff4d4d;display:inline-block;padding-bottom:5px;}
+button{padding:12px 25px;background:#ff0000;border:none;border-radius:6px;cursor:pointer;font-weight:700;transition:0.3s;}
+button:hover{background:#e60000;transform:scale(1.05);}
+.form-box{background:#1b1b1b;padding:25px;border-radius:10px;max-width:450px;margin:20px auto;}
+.form-box input{width:100%;padding:12px;margin:10px 0;border-radius:5px;border:none;background:#222;color:#fff;}
+.social-links{text-align:center;margin:20px 0;}
+.social-links a{display:inline-block;margin:0 15px;font-weight:700;padding:8px 15px;background:#222;border-radius:8px;transition:0.3s;}
+.social-links a:hover{background:#ff0000;transform:scale(1.05);}
+.card{background:#1b1b1b;padding:20px;border-radius:12px;margin:15px 0;transition:0.3s;}
+.card:hover{background:#2b2b2b;transform:scale(1.02);}
+.upi-section{background:#1b1b1b;padding:25px;border-radius:12px;text-align:center;margin:30px auto;max-width:450px;}
+.upi-section img{margin-top:15px;border-radius:10px;border:2px solid #ff0000;}
+table{width:100%;border-collapse:collapse;margin-top:15px;}
+th,td{padding:12px;text-align:center;border-bottom:1px solid #333;}
+th{background:#222;color:#ff4d4d;}
+tr:hover{background:#222;}
+footer{background:#0b0b0b;padding:15px 30px;text-align:center;border-top:2px solid #ff0000;}
+.admin-dashboard{display:none; background:#1b1b1b; padding:25px; border-radius:10px; margin-top:20px;}
+.admin-dashboard h3{color:#ff4d4d; margin-bottom:15px;}
+.admin-dashboard .card{margin-bottom:15px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Loot and Shoot Tournament</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#content">Content</a>
+<a href="#blog">Blog</a>
+<a href="#shop">Shop</a>
+<a href="#analysis">Analysis</a>
+<a href="#signup">Sign Up</a>
+</nav>
+</header>
+
+<section id="home" class="container">
+<h2 class="section-title">Welcome to Loot and Shoot</h2>
+<p style="text-align:center;">Join the most exciting gaming tournaments and win amazing prizes! Compete with top players and show your skills.</p>
+<div class="social-links">
+<a href="https://youtube.com/@lootshoottournament?si=4QMBlEsZhcLB5Efu" target="_blank">YouTube</a>
+<a href="https://chat.whatsapp.com/LR7GpFGEfds0Cglbh8X5Nc?mode=ems_share_c" target="_blank">WhatsApp</a>
+<a href="https://www.instagram.com/lootshoot_tournament?igsh=MWJrbzJpbW90aDh0" target="_blank">Instagram</a>
+</div>
+</section>
+
+<section id="about" class="container">
+<h2 class="section-title">About</h2>
+<div class="card">
+<p>This website is for organizing gaming tournaments. Players can register, join matches, check results, and win prizes. Admin can manage content, tournaments, and users easily via the admin panel.</p>
+</div>
+</section>
+
+<section id="content" class="container">
+<h2 class="section-title">Content</h2>
+<div class="card">Latest tournament updates, match schedules, and gaming news will appear here.</div>
+</section>
+
+<section id="blog" class="container">
+<h2 class="section-title">Blog</h2>
+<div class="card" id="blogList">Gaming strategies, tournament highlights, and player tips.</div>
+</section>
+
+<section id="shop" class="container">
+<h2 class="section-title">Shop</h2>
+<div class="card">Merchandise, entry tickets, and gaming gear for players.</div>
+</section>
+
+<section id="analysis" class="container">
+<h2 class="section-title">Analysis & Leaderboard</h2>
+<div class="card">
+<p>Leaderboard:</p>
+<table id="leaderboard">
+<tr><th>Player</th><th>Matches Played</th><th>Wins</th><th>Points</th></tr>
+<tr><td>Player1</td><td>10</td><td>7</td><td>150</td></tr>
+<tr><td>Player2</td><td>8</td><td>5</td><td>120</td></tr>
+<tr><td>Player3</td><td>12</td><td>9</td><td>200</td></tr>
+</table>
+</div>
+</section>
+
+<section id="signup" class="container">
+<h2 class="section-title">User Sign Up / Login</h2>
+
+<div class="form-box">
+<h3>Sign Up</h3>
+<form id="signupForm">
+<input type="text" placeholder="Name" id="signupName" required>
+<input type="email" placeholder="Email" id="signupEmail" required>
+<input type="tel" placeholder="Mobile Number" id="signupMobile" required>
+<input type="password" placeholder="Password" id="signupPassword" required>
+<button type="submit">Sign Up</button>
+</form>
+</div>
+
+<div class="form-box">
+<h3>Login</h3>
+<form id="loginForm">
+<input type="email" placeholder="Email" id="loginEmail" required>
+<input type="password" placeholder="Password" id="loginPassword" required>
+<button type="submit">Login</button>
+</form>
+</div>
+
+<div class="form-box">
+<h3>Admin Login</h3>
+<form id="adminForm">
+<input type="email" placeholder="Admin Email" id="adminEmail" value="niuinxz@gmail.com" required>
+<input type="password" placeholder="Password" id="adminPassword" value="Ldp90" required>
+<button type="submit">Admin Login</button>
+</form>
+<p>Admin can manage tournaments, leaderboard, and blog from here.</p>
+</div>
+
+<!-- ===== Admin Dashboard ===== -->
+<div class="admin-dashboard" id="adminDashboard">
+<h2 class="section-title">Admin Dashboard</h2>
+
+<div class="card">
+<h3>Add Tournament</h3>
+<form id="tournamentForm">
+<input type="text" placeholder="Tournament Name" id="tName" required>
+<input type="text" placeholder="Date / Time" id="tDate" required>
+<input type="text" placeholder="Map / Mode" id="tMap" required>
+<input type="number" placeholder="Entry Fee" id="tFee" required>
+<button type="submit">Add Tournament</button>
+</form>
+<div id="tournamentList"></div>
+</div>
+
+<div class="card">
+<h3>Add Blog Post</h3>
+<form id="blogForm">
+<input type="text" placeholder="Blog Title" id="blogTitle" required>
+<textarea placeholder="Blog Content" id="blogContent" style="width:100%;padding:10px;background:#222;color:#fff;border:none;border-radius:5px;margin:10px 0;" required></textarea>
+<button type="submit">Add Blog</button>
+</form>
+<div id="blogPosts"></div>
+</div>
+
+<div class="card">
+<h3>Registered Users</h3>
+<div id="userList"></div>
+</div>
+
+<div class="card">
+<h3>Leaderboard Management</h3>
+<form id="leaderboardForm">
+<input type="text" placeholder="Player Name" id="lpName" required>
+<input type="number" placeholder="Matches Played" id="lpMatches" required>
+<input type="number" placeholder="Wins" id="lpWins" required>
+<input type="number" placeholder="Points" id="lpPoints" required>
+<button type="submit">Add / Update Player</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<section class="container">
